@@ -139,4 +139,52 @@ public class BubbleSortTest {
         Arrays.sort(b);
         assertEquals(0,Arrays.compare(b, a));
     }
+
+    @Test
+    public void sort1WithLargeArray_sorted(){
+        System.out.println("\n** sort1WithLargeArray_sorted **");
+        int[] a = Arrays.copyOf(x,10000);
+        int[] b = Arrays.copyOf(x,10000);
+        Arrays.sort(a);
+        BubbleSort bubbleSort = new BubbleSort();
+        long startTime =  System.nanoTime();
+        bubbleSort.bubbleSort1(a);
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        System.out.println(String.format("Sort1 took %,d nanoseconds with large sortred array", duration));
+        Arrays.sort(b);
+        assertEquals(0,Arrays.compare(b, a));
+    }
+
+    @Test
+    public void sort2WithLargeArray_sorted(){
+        System.out.println("\n** sort2WithLargeArray_sorted **");
+        int[] a = Arrays.copyOf(x,10000);
+        int[] b = Arrays.copyOf(x,10000);
+        Arrays.sort(a);
+        BubbleSort bubbleSort = new BubbleSort();
+        long startTime =  System.nanoTime();
+        bubbleSort.bubbleSort2(a);
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        System.out.println(String.format("Sort2 took %,d nanoseconds with large sortred array", duration));
+        Arrays.sort(b);
+        assertEquals(0,Arrays.compare(b, a));
+    }
+
+    @Test
+    public void sort3WithLargeArray_sorted(){
+        System.out.println("\n** sort3WithLargeArray_sorted **");
+        int[] a = Arrays.copyOf(x,10000);
+        int[] b = Arrays.copyOf(x,10000);
+        Arrays.sort(a);
+        BubbleSort bubbleSort = new BubbleSort();
+        long startTime =  System.nanoTime();
+        bubbleSort.bubbleSort3(a);
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        System.out.println(String.format("Sort3 took %,d nanoseconds with large sortred array", duration));
+        Arrays.sort(b);
+        assertEquals(0,Arrays.compare(b, a));
+    }
 }
